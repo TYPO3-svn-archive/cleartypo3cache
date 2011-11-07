@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for extenstion cleartypo3cache</description>
+	</meta> 
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="cleartypo3cache_task_clearCache.name">Clear TYPO3 cache</label>
+			<label index="cleartypo3cache_task_clearCache.description">This task clears either the entire TYPO3 cache or only the page cache</label>			
+			<label index="cleartypo3cache_task_clearCache.cacheaction">Clear all cache or only page cache</label>
+		</languageKey>
+		<languageKey index="fr" type="array">
+			<label index="cleartypo3cache_task_clearCache.name">Vider le cache</label>
+			<label index="cleartypo3cache_task_clearCache.description">Cette tâche vide entièrement la cache de TYPO3 ou uniquement la cache des pages</label>
+			<label index="cleartypo3cache_task_clearCache.cacheaction">Vider toute la cache ou seulement la cache des pages</label>
+		</languageKey>
+	</data>
+</T3locallang>
