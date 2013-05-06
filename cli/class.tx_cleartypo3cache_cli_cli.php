@@ -79,7 +79,9 @@ class tx_cleartypo3cache_cli_cli extends t3lib_cli {
 	 * @param string $cacheCmd
 	 */
 	private function clearTypo3Cache($cacheCmd) {
+		/* @var $TceMain t3lib_TCEmain */
 		$TceMain = t3lib_div::makeInstance('t3lib_TCEmain');
+		$TceMain->admin = 1;
 		$TceMain->stripslashes_values = 0;
 		$TceMain->start(Array(),Array());
 		$TceMain->clear_cacheCmd( $cacheCmd );
