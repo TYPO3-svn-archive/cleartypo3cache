@@ -42,7 +42,7 @@ class tx_cleartypo3cache_cli_cli extends t3lib_cli {
 		$this->cli_help = array_merge($this->cli_help, array(
 			'name' => 'tx_cleartypo3cache_cli_cli',
 			'synopsis' => $this->extKey . ' cache-command',
-			'description' => 'This script can clear the complete TYPO3-cache (attention: CLI-be_user must have the rights (TS: "options.clearCache.all=1" and "options.clearCache.pages=1") to do this)',
+			'description' => 'This script can clear the complete TYPO3-cache',
 			'examples' => 'typo3/cli_dispatch.phpsh ' . $this->extKey . ' [all|pages]',
 			'author' => '(c) 2010 AOE media GmbH <dev@aoemedia.de>',
 		));
@@ -84,7 +84,6 @@ class tx_cleartypo3cache_cli_cli extends t3lib_cli {
 		$TceMain->start(Array(),Array());
 		$TceMain->clear_cacheCmd( $cacheCmd );
 		unset($TceMain);
-
 	}
 	
 	/**
