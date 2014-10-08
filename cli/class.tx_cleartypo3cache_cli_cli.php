@@ -37,7 +37,11 @@ class tx_cleartypo3cache_cli_cli extends t3lib_cli {
 	 * constructor
 	 */
 	public function __construct() {
-		parent::t3lib_cli();
+        if (version_compare(TYPO3_version, '4.6.0', '>=')) {
+            parent::__construct();
+        } else {
+            parent::t3lib_cli();
+        }
 		$this->cli_options = array_merge($this->cli_options, array());
 		$this->cli_help = array_merge($this->cli_help, array(
 			'name' => 'tx_cleartypo3cache_cli_cli',
