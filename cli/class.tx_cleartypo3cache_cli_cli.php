@@ -10,8 +10,6 @@
 
 if (!defined ('TYPO3_cliMode')) die ('Access denied: CLI only.');
 
-require_once(PATH_t3lib.'class.t3lib_cli.php');
-
 /**
  * class to process actions via CLI
  * @package eft

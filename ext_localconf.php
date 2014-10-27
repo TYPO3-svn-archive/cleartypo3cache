@@ -1,10 +1,10 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
-global $TYPO3_CONF_VARS, $_EXTKEY;
+global $_EXTKEY;
 
 if (TYPO3_MODE == 'BE') {
 	## Setting up script that can be run through cli_dispatch.phpsh
-	$TYPO3_CONF_VARS['SC_OPTIONS']['GLOBAL']['cliKeys'][$_EXTKEY] = array(
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['cliKeys'][$_EXTKEY] = array(
 		'EXT:' . $_EXTKEY . '/cli/class.tx_cleartypo3cache_cli_cli.php',
 		'_CLI_cleartypo3cache'
 	);
